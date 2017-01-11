@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+	.image_area img {
+		width: 720px;
+		margin: 30px 40px;
+		box-shadow: 4px 4px 0px rgba(0,0,0,.15);
+	}
+	
+	.abbott_box {
+		font-size: 18px;
+		width: 660px;
+		position: absolute;
+		top: 210px;
+		left: 50%;
+		margin-left: -350px;
+		padding: 40px 20px;
+		border: 2px solid rgb(0,148,94);
+		background-color: rgb(255,255,255);
+		opacity: 0;
+		z-index: -1;
+		box-shadow: 4px 4px 0px rgba(0,0,0,.15);
+	}
+	
+	a.guidelines_btn {
+		left: 19px;
+		box-shadow: none;
+		background-image: url(images/btns/guidelines-btn.png);
+	}
+</style>
+<script>
+	$(document).ready(function() {
+		$('.image_area img').on('tap', function() {
+			TweenMax.to($(this), .8, {opacity: 0.3});
+			$('.abbott_box').css('z-index','1000');
+			TweenMax.to($('.abbott_box'), .5, {opacity: 1});
+		});
+	});
+</script>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>Roche Troponin T is the standard by which others compare themselves <sup>12</sup></h1>
+
+                <img src="images/guidelines_03/blank.jpg">
+                
+                <div class="abbott_box">
+                	<p>Researchers at Brigham and Women's Hospital evaluated the performance of a hsTnI assay (Abbott, ARCHITECT) with the performance of a <strong>fourth generation troponin T assay (Roche, TnT)</strong> among 4,695 patients presenting with severe chest pain and found that the hsTnI assay identified more patients at higher risk of recurrent heart attack, even at very low troponin concentrations.</p>
+                </div>
+                
+                <ul class="touch_icons">
+                    <li></li>
+                </ul>
+            </div>
+        
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+                <p>Since TnI assays became commercially available, they have been compared to the Roche Troponin T test.</p>
+                <p>Now, the new high sensitive Troponin I assays compare their results to Roche Troponin T.</p>
+                <p>What does this imply?  Roche is the Standard?</p>
+
+            </div>
+        </div>
+        
+        <a class="left_btn" href="guidelines_02.html"></a> <!--NAVIGATE LEFT -->
+        <a class="right_btn" href="guidelines_04.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

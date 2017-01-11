@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TimelineMax.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+	.image_area img {
+		width: 580px;
+		margin: 10px 110px;
+	}
+	
+	.image_area p {
+		position: absolute;
+		bottom: 60px;
+		left: 40px;
+		font-size: 11px;
+	}
+
+	a.reliability_btn {
+		left: 19px;
+		box-shadow: none;
+		background-image: url(images/btns/reliability-btn.png);
+	}
+</style>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>Autoantibody interferences could result in false positives or false negatives <sup>29</sup></h1>
+                
+				<img src="images/reliability_02.png">
+                <p>*Roche was not part of this study, please reference the Package Insert.</p>                
+            </div>
+        
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+				<p>As referenced in the Tang article, the results in the shaded portion of the chart fall within the normal range of recovery. Those falling above the solid line represent over recovery and a false positive. Those falling below the dotted line represent under recovery and a false negative.</p>
+
+            </div>
+        </div>
+        
+        <a class="left_btn" href="reliability_02.html"></a><!-- NAVIGATE LEFT -->
+        <a class="right_btn" href="reliability_04.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

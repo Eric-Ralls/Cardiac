@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+
+	.def {
+		width: 350px;
+		position: absolute;
+		left: 50%;
+		margin-left: -175px;
+		border: 1px solid rgb(200,200,200);
+		box-shadow: 4px 4px 0px rgba(0,0,0,.25);
+	}
+
+	.def_box {
+		font-size: 18px;
+		width: 660px;
+		position: absolute;
+		top: 210px;
+		left: 50%;
+		margin-left: -350px;
+		padding: 40px 20px;
+		border: 2px solid rgb(0,148,94);
+		background-color: rgb(255,255,255);
+		opacity: 0;
+		z-index: -1;
+	}
+	
+	.image_area h2 {
+		font-family: 'ImagoBold';
+		font-size: 50px;
+		width: 720px;
+		position: absolute;
+		left: 50%;
+		top: 255px;
+		margin-left: -360px;
+		text-align: center;
+		color: rgb(0,148,94);
+		opacity: 0;
+		z-index: -1;
+		text-shadow: 4px 4px rgba(0,0,0,.15);
+	}
+	
+	a.guidelines_btn {
+		left: 19px;
+		box-shadow: none;
+		background-image: url(images/btns/guidelines-btn.png);
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.def').on('tap', function() {
+			if ($('.image_area h2').css('opacity') < 1) {
+				TweenMax.to($(this), .8, {opacity: 0.3});
+				$('.def_box').css('z-index','1000');
+				TweenMax.to($('.def_box'), 1, {opacity: 1});
+			}
+		});
+		
+		$('.def_box').on('tap', function() {
+			TweenMax.to($(this), .8, {opacity: 0.3});
+			$('.image_area h2').css('z-index','1000');
+			TweenMax.to($('.image_area h2'), 1, {opacity: 1});
+		});
+	});
+</script>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>Third Universal Definition of Myocardial Infarction </h1>
+                
+                <img class="def" src="images/guidelines_01/front-page.png">
+				<div class="def_box">The preferred biomarker—overall and for each specific category of MI—is cTn (I or T), which has high myocardial tissue specificity as well as high clinical sensitivity. Detection of a rise and/or fall of the measurements is essential to the diagnosis of acute MI.<sup>6</sup></div>
+                <h2>I is not superior to T.</h2>
+
+                <ul class="touch_icons">
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+                <p>The guidelines for the Definition of Myocardial Infarction call out both I and T.<sup>6</sup>
+                	<ul>
+                    	<li>I is not superior to T.</li>
+                    </ul>
+                </p>
+                <p>The preferred biomarker is cardiac troponin (I or T), which has high myocardial tissue specificity as well as high clinical sensitivity.<sup>4</sup>
+                	<ul>
+                    	<li>Detection of a rise and/or fall of the measurements is essential to the diagnosis of acute MI.</li>
+                    </ul>
+                </p>
+                <p>Evidence based data supports the use of assays with a CV of &le; 20% at the 99th percentile.<sup>7</sup></p>
+            </div>
+        </div>
+        
+        <!--<a class="left_btn" href="#"></a> NAVIGATE LEFT -->
+        <a class="right_btn" href="guidelines_02.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

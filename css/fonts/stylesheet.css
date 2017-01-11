@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'ImagoLight';
+    src: url('Imago/berthold_-_imago-light-webfont.eot');
+    src: url('Imago/berthold_-_imago-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Imago/berthold_-_imago-light-webfont.woff') format('woff'),
+         url('Imago/berthold_-_imago-light-webfont.ttf') format('truetype'),
+         url('Imago/berthold_-_imago-light-webfont.svg#berthold_imagolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ImagoLightItalic';
+    src: url('Imago/berthold_-_imago-lightitalic-webfont.eot');
+    src: url('Imago/berthold_-_imago-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Imago/berthold_-_imago-lightitalic-webfont.woff') format('woff'),
+         url('Imago/berthold_-_imago-lightitalic-webfont.ttf') format('truetype'),
+         url('Imago/berthold_-_imago-lightitalic-webfont.svg#berthold_imagolight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ImagoRegular';
+    src: url('Imago/imagw_-webfont.eot');
+    src: url('Imago/imagw_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Imago/imagw_-webfont.woff') format('woff'),
+         url('Imago/imagw_-webfont.ttf') format('truetype'),
+         url('Imago/imagw_-webfont.svg#imagonormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ImagoItalic';
+    src: url('Imago/imagwi-webfont.eot');
+    src: url('Imago/imagwi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Imago/imagwi-webfont.woff') format('woff'),
+         url('Imago/imagwi-webfont.ttf') format('truetype'),
+         url('Imago/imagwi-webfont.svg#imagoitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ImagoBold';
+    src: url('Imago/berthold_-_imago-bold-webfont.eot');
+    src: url('Imago/berthold_-_imago-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Imago/berthold_-_imago-bold-webfont.woff') format('woff'),
+         url('Imago/berthold_-_imago-bold-webfont.ttf') format('truetype'),
+         url('Imago/berthold_-_imago-bold-webfont.svg#berthold_imagobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ImagoBoldItalic';
+    src: url('Imago/berthold_-_imago-bolditalic-webfont.eot');
+    src: url('Imago/berthold_-_imago-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Imago/berthold_-_imago-bolditalic-webfont.woff') format('woff'),
+         url('Imago/berthold_-_imago-bolditalic-webfont.ttf') format('truetype'),
+         url('Imago/berthold_-_imago-bolditalic-webfont.svg#berthold_imagobold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MinionProMediumItalic';
+    src: url('MinionPro/minionpro-mediumit_0-webfont.eot');
+    src: url('MinionPro/minionpro-mediumit_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('MinionPro/minionpro-mediumit_0-webfont.woff') format('woff'),
+         url('MinionPro/minionpro-mediumit_0-webfont.ttf') format('truetype'),
+         url('MinionPro/minionpro-mediumit_0-webfont.svg#minion_promedium_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MinionProSemiboldItalic';
+    src: url('MinionPro/minionpro-semiboldit_0-webfont.eot');
+    src: url('MinionPro/minionpro-semiboldit_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('MinionPro/minionpro-semiboldit_0-webfont.woff') format('woff'),
+         url('MinionPro/minionpro-semiboldit_0-webfont.ttf') format('truetype'),
+         url('MinionPro/minionpro-semiboldit_0-webfont.svg#minion_prosemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MinionProBoldItalic';
+    src: url('MinionPro/minionpro-boldit_0-webfont.eot');
+    src: url('MinionPro/minionpro-boldit_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('MinionPro/minionpro-boldit_0-webfont.woff') format('woff'),
+         url('MinionPro/minionpro-boldit_0-webfont.ttf') format('truetype'),
+         url('MinionPro/minionpro-boldit_0-webfont.svg#minion_probold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

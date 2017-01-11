@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+	
+	<widget xmlns	= "http://www.w3.org/ns/widgets"
+		xmlns:gap	= "http://phonegap.com/ns/1.0"
+		id			= "com.endocyte.pipeline"
+		version		= "1.0.0" >
+		
+		<name>Roche Troponin T</name>
+		
+		<description>
+			Roche Troponin T Interactive Sales Tool
+		</description>
+		
+		<author href="http://www.koeussolutions.com/" email="ksadmin@koeussolutions.com">
+			Koeus Solutions
+		</author>
+		
+		<preference name="orientation" value="landscape" />
+		<preference name="fullscreen" value="true" />
+		<preference name="exit-on-suspend" value="true" />
+		
+		<!-- iPad Icons -->
+		<icon src="icon-76.png" gap:platform="ios" width="76" height="76" />
+		<icon src="icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+		
+		<!-- iPad Splash -->
+		<gap:splash src="Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
+		<gap:splash src="Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
+
+	</widget>

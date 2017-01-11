@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+
+	.image_area {
+		overflow: hidden;
+	}
+
+	.chart, .beckman {
+		width: 740px;
+		margin: 40px 20px;
+		z-index: 100;
+		box-shadow: 0px 0px 0px rgb(0,0,0);
+	}
+	
+	.beckman {
+		position: relative;
+		top: -250px;
+	}
+	
+	a.sensitivity_btn {
+		left: 19px;
+		box-shadow: none;
+		background-image: url(images/btns/sensitivity-btn.png);
+	}
+</style>
+<script>
+	$(document).ready(function() {
+		$('.beckman').on('tap', function() {
+				resetChart();
+			if (parseInt($(this).css('width')) < 900) {
+				TweenMax.to($('.chart'), .5, {opacity: 0.4});
+				TweenMax.to($(this), .5, {width: '900px', left:'-40px', top:'-255px', 'z-index':1000, 'box-shadow':'0px 0px 5px rgb(0,0,0)'});
+			}
+		});
+		
+		function resetChart() {
+			TweenMax.to($('.chart'), .5, {opacity: 1});
+			TweenMax.to($('.beckman'), .5, {opacity: 1, width: '740px', left:'0px', top:'-250px', 'z-index':100, 'box-shadow':'0px 0px 0px rgb(0,0,0)'});
+		}
+
+
+	});
+
+</script>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>Roche Troponin T has a low 99th percentile value <sup>7,23,24</sup></h1>
+                
+                <img class="chart" src="images/charts/sensitivity_03.jpg">
+                <img class="beckman" src="images/charts/sensitivity_03_beckman.png">
+                
+                <ul class="touch_icons">
+                    <li></li>
+                </ul>
+
+            </div>
+        
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+                <p>Our competitors have a wide range of 99<sup>th</sup> percentiles (ng/mL) used in their various TnI assays.<sup>7</sup></p>
+                <p>Even the same reagent has different 99<sup>th</sup> percentiles on different instruments.</p>
+                <p>Here again, we are referring to Beckman.  They have the same reagent, but when used on different instruments, it performs differently and therefore causes them to have two different 99<sup>th</sup> percentile values.</p>
+                <p>How confident would you be that a patient is at low risk when they have a detectable troponin level of 0.032 ng/mL?</p>
+                <p>What about at 0.01 ng/mL?</p>
+                
+            </div>
+        </div>
+        
+        <a class="left_btn" href="sensitivity_02.html"></a><!-- NAVIGATE LEFT -->
+        <a class="right_btn" href="sensitivity_04.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

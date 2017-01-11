@@ -1,0 +1,277 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Import CSS Reset */
+@import "reset.css";
+
+/* Import font */
+@import "fonts/stylesheet.css";
+
+html, body {
+	overflow: hidden;
+}
+
+body {
+	width: 980px;
+	height: 674px;
+	position: absolute;
+	/*top: 50%;
+	left: 50%;*/
+	top: 0;
+	left: 0;
+	/*margin: -337px 0px 0px -490px;*/
+	-webkit-font-smoothing: antialiased;
+	border: 1px solid rgb(200,200,200);
+}
+
+strong {
+	font-family: 'ImagoBold';
+}
+
+em {
+	font-family: 'ImagoItalic';
+}
+
+
+#main_window {
+	border-left: 10px solid rgb(200,200,200);
+	background-color: rgb(245,245,245);
+	width: 858px;
+	height: 674px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#main_window img.roche_logo, #main_window img.cobas_logo {
+	height: 30px;
+	position: absolute;
+	bottom: 20px;
+}
+
+#main_window img.roche_logo {
+	left: 20px;
+}
+
+#main_window img.cobas_logo {
+	right: 20px;
+}
+
+#main_window a.left_btn, #main_window a.right_btn {
+	width: 60px;
+	height: 44px;
+	position: absolute;
+	top: 18px;
+	z-index: 5000;
+	background-size: 100% 100%;
+}
+
+#main_window a.left_btn {
+	background-image: url(../images/btns/move-left.png);
+	left: 12px;
+}
+
+#main_window a.right_btn {
+	background-image: url(../images/btns/move-right.png);
+	right: 10px;
+}
+
+#main_window a.narrative_btn {
+	width: 60px;
+	height: 44px;
+	position: absolute;
+	bottom: 75px;
+	right: 10px;
+	background-image: url(../images/btns/narrative.png);
+	background-size: 100% 100%;
+}
+
+#content_area {
+	width: 820px;
+	height: 570px;
+	position: absolute;
+	top: 35px;
+	left: 20px;
+	overflow: hidden;
+	border-top: 1px solid rgb(125,125,125);
+	border-bottom: 1px solid rgb(125,125,125);
+}
+
+.image_area, .text_area {
+	font-family: 'ImagoRegular';
+	font-size: 14px;
+	border-left: 1px solid rgb(125,125,125);
+	border-right: 1px solid rgb(125,125,125);
+	padding: 34px 10px 10px 10px;
+	height: 100%;
+	position: relative;
+	top: 0px;
+	background-color: rgb(255,255,255);
+}
+
+.image_area {
+	margin-bottom: 25px;
+	border-bottom: 1px solid rgb(125,125,125);
+}
+
+.image_area h1 {
+	font-family: 'ImagoBold';
+	font-size: 20px;
+	color: rgb(0,148,94);
+	margin-bottom: 20px;
+	padding: 0px 0px 2px 4px;
+	border-bottom: 1px solid rgb(0,148,94);
+}
+
+.image_area h1 sup {
+	font-size: 12px;
+}
+
+.image_area video {
+	width: 720px;
+	margin-top: 20px;
+	margin-left: 40px;
+	background-color: rgb(255,255,255);
+}
+
+.image_area .label {
+	font-family: 'ImagoBold';
+	font-size: 18px;
+}
+
+.text_area {
+	border-top: 1px solid rgb(125,125,125);
+}
+
+.text_area h2 {
+	font-family: 'ImagoBold';
+}
+
+.text_area p {
+	padding-bottom: 8px;
+}
+
+/*.text_area p sup {
+	font-size: 10px;
+	
+}*/
+
+.text_area ul {
+	list-style: inside;
+}
+
+.text_area ul li {
+	margin-left: 10px;
+	padding: 2px 0px;
+}
+
+.button_line {
+	height: 600px;
+	width: 3px;
+	position: absolute;
+	left: 60px;
+	top: 20px;
+	background-color: rgb(80,80,80);
+}
+
+a.main_menu_btn, a.five_keys_btn, a.guidelines_btn, a.speed_btn, a.standardization_btn, a.reliability_btn, a.sensitivity_btn {
+	display: block;
+	width: 85px;
+	height: 85px;
+	position: absolute;
+	left: 15px;
+	background-size: 100% 100%;
+	box-shadow: 4px 4px 0px rgba(0,0,0,.25);
+}
+
+a.main_menu_btn {
+	top: 10px;
+	background-image: url(../images/btns/main-menu-btn.jpg);
+}
+
+a.five_keys_btn {
+	top: 104px;
+	background-image: url(../images/btns/5-keys-btn.jpg);
+}
+
+a.guidelines_btn{
+	top: 198px;
+	background-image: url(../images/btns/guidelines-btn.jpg);
+}
+
+a.speed_btn {
+	top: 292px;
+	background-image: url(../images/btns/speed-btn.jpg);
+}
+
+a.standardization_btn {
+	top: 386px;
+	background-image: url(../images/btns/standardization-btn.jpg);
+}
+
+a.reliability_btn {
+	top: 480px;
+	background-image: url(../images/btns/reliability-btn.jpg);
+}
+
+a.sensitivity_btn {
+	top: 574px;
+	background-image: url(../images/btns/sensitivity-btn.jpg);
+}
+
+a.background_btn, a.video_btn_1, a.video_btn_2, a.video_btn_3 {
+	display: block;
+	width: 28px;
+	position: absolute;
+	right: 8px;
+	z-index: 2000;
+	background-size: 100% 100%;
+	box-shadow: 4px 4px 0px rgba(0,0,0,.25);
+}
+
+a.background_btn {
+	height: 152px;
+	top: 100px;
+	background-image: url(../images/btns/background-btn.jpg);
+}
+
+a.video_btn {
+	display: inline-block;
+	width: 200px;
+	margin: 55px 30px;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+a.video_btn img {
+	width: 200px;
+	margin: 20px 0px 10px 0px;
+	box-shadow: 6px 6px 0px rgba(0,0,0,.15);
+}
+
+a.video_btn h2 {
+	font-family: 'ImagoBold';
+	font-size: 16px;
+	color: rgb(0,148,94);
+	margin-bottom: 4px;
+}
+
+a.video_btn h3 {
+	font-family: 'ImagoRegular';
+	font-size: 14px;
+	color: rgb(80,80,80);
+}
+
+ul.touch_icons {
+	position: absolute;
+	bottom: 50px;
+	opacity: .5;
+}
+
+ul.touch_icons li {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(../images/star-icon.jpg);
+	background-size: 100% 100%;
+}

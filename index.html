@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+	#content_area {
+		border: 5px solid rgb(0,148,94);
+		background-color: rgb(255,255,255);
+	}
+	
+	.image_area, .text_area {
+		border: none;
+	}
+	
+	.image_area {
+		background-image: url(images/main_img.jpg);
+		border-bottom: 5px solid rgb(0,148,94);
+	}
+	
+	.text_area {
+		height: 490px;
+		direction: rtl;
+		overflow-y: scroll;
+	}
+	
+	.references {
+		direction: ltr;
+	}
+	
+	.text_area h2 {
+		font-family: 'ImagoBold';
+		font-size: 22px;
+		width: 720px;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		margin-left: -360px;
+		text-align: center;
+		color: rgb(0,148,94);
+		text-shadow: 4px 4px rgba(0,0,0,.15);
+	}
+	
+	.text_area p {
+		font-size: 11px;
+		padding-bottom: 3px;
+		padding-left: 9px;
+		text-indent: -9px;
+		
+	}
+	
+	.text_area p strong {
+		font-size: 9px;
+	}
+	
+</style>
+<script>
+$(document).ready(function() {
+	$image_area = $('.image_area');
+	$text_area = $('.text_area');
+	$narrToggle = false;
+	
+	$('a.narrative_btn').on('tap', function(event) {
+		event.preventDefault();
+		
+		if ($narrToggle)
+		{
+			TweenMax.to($image_area, 1, {top: '0px'});
+			TweenMax.to($text_area, 1, {top: '0px'});
+		} else {
+			TweenMax.to($image_area, 1, {top: '-620px'});
+			TweenMax.to($text_area, 1, {top: '-620px'});
+		}
+		
+		$narrToggle = !$narrToggle;
+		
+	});
+	
+});
+</script>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+            </div>
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+            <div class="references">
+            	<h2>References</h2>
+				
+                <p><strong>1</strong> ACC_AHA 2011 Guidelines Management of NSTEMI &amp; UA_Circ2011.123.e426.</p>
+				<p><strong>2</strong> Morrow, D.A. et al:  <em>“Cardiovascular Biomarkers, Pathophysiology and Disease Management”</em>. Humana Press 2006:  Chapter 1, pg 16.</p>
+				<p><strong>3</strong> Januzzi, J.L. et al: <em>“Cardiac Biomarkers in Clinical Practice”</em>. Jones and Bartlett Publishers 2011; Chapter 1, pg 4.</p>
+                <p><strong>4</strong> Troponin T STAT [package insert]. 2012-07, V7. Indianapolis, IN: Roche Diagnostics Corporation; 2012.</p>
+                <p><strong>5</strong> Tate JR et al., Clin Chem Lab Med 2008; 46(11):1489-1500.</p>
+                <p><strong>6</strong> Thygesen K, Alpert JS, Jaffe AS, et al. Third universal definition of myocardial infarction. Circulation. 2012;126(16):2020-2035.</p>
+                <p><strong>7</strong> Apple FS, Collinson PO. Analytical characteristics of high-sensitivity cardiac troponin assays. Clin Chem. 2012;58(1):54-61.</p>
+                <p><strong>8</strong> Anderson JL, Adams CD, Antman EM et al. 2012 ACCF/AHA focused update incorporated into the ACCF/AHA 2007 Guidelines for the management of patients with unstable angina/non-ST-elevation myocardial infarction. J Am Coll Cardiol. 2013;61(23):e179-347.</p>
+                <p><strong>9</strong> GUSTO IV investigators: <em>“Effect of glycoprotein IIb/IIIa receptor blocker abciximab on outcome in patients with ACS without early coronary revascularization:<br>The GUSTO IV - ACS randomized trial.”</em> Lancet 2001; 357: 1915-1924.</p>
+                <p><strong>10</strong> FRISC II investigators: <em>“Invasive compared with non-invasive treatment in unstable coronary-artery disease: FRISC II prospective randomized multicenter study.”</em><br>Lancet 1999; 354: 708-715.</p>
+                <p><strong>11</strong> TACTICS TIMI 18 Trial: Cannon, C.P. et al.: <em>“Comparison of early invasive and conservative strategies in patients with unstable coronary syndromes treated<br>with the glycoprotein IIb/IIIa inhibitor Tirofiban.”</em> NEJM 2001; 344: 1879-87.</p>
+                <p><strong>12</strong> http://www.abbott.com/press-release/new-data-for-abbotts-investigational-high-sensitive-troponin-test-shows-it-may-help-doctors-predict.htm. Accessed<br>December 2, 2013.</p>
+                <p><strong>13</strong> U.S. News and World Report. Top-ranked hospitals for cardiology and heart surgery. http://health.usnews.com/best-hospitals/rankings/cardiology-and-heart-surgery. Accessed January 20, 2013.</p>
+                <p><strong>14</strong> Roche Market Book on file in CD Marketing, 2012.</p>
+                <p><strong>15</strong> American Heart Association. Heart Disease and Stroke Statistics-2012 Update.</p>
+                <p><strong>16</strong> Rathore, Saif S., et al, Association of Door to Balloon Time and Mortality in Patients, BMJ, 28 January 2009.</p>
+                <p><strong>17</strong> CAP TODAY: Survey on automated immunoassay analyzers, HCG STAT, June 2012.</p>
+                <p><strong>18</strong> Data prepared by Argent Global Services.</p>
+                <p><strong>19</strong> Interview with Professor Hugo A. Katus, Head of Cardiology, Angiology and Pulmonology at Heidelberg University Hospital.</p>
+                <p><strong>20</strong> TnI-Ultra [package insert]. 2008. Tarrytown, NY: Siemens Healthcare Diagnostics Inc; 2008.</p>
+                <p><strong>21</strong> Dimension Vista [package insert]. 2008. Newark, DE: Siemens Healthcare Diagnostics Inc; 2008.</p>
+                <p><strong>22</strong> STAT High Sensitive Troponin-I [package insert]. 2012. Abbott Part, IL: Abbott Laboratories; 2012.</p>
+                <p><strong>23</strong> Access 2 AccuTnI+3 [package insert]. 2013. Brea, CA: Beckman Coulter, Inc; June 2013.</p>
+                <p><strong>24</strong> DxI AccuTnI+3 [package insert]. 2013. Brea, CA: Beckman Coulter, Inc; September 2013.</p>
+                <p><strong>25</strong> VITROS Troponin I ES [package insert]. 2007-08. Rochester, NY: Ortho-Clinical Diagnostics, Inc:2007-08.</p>
+                <p><strong>26</strong> Jaffe AS, Babuin L, Apple FS. Biomarkers in acute cardiac disease: the present and the future. J Am Coll Cardiol. 2006;48:1-11.</p>
+                <p><strong>27</strong> Melanson, S et al., Circulation 2007 116;e501-e50407.</p>
+                <p><strong>28</strong> Lum, G et al., Labmedicine 2006 37(9): 546-550.</p>
+                <p><strong>29</strong>Tang, G., et al, Multiple Immunoassay Systems Are Negatively Interfered by Circulating Cardiac Troponin I Autoantibodies, Clin Exp Med 2012: 12:47-53.</p>
+                <p><strong>30</strong>Savukoski, T., et al, Epitope Specificity and IgG Subclass Distribtuion of Autoantibodies to Cardiac Troponin, Clin Chem. 2012;59(3): 512-518.</p>
+                <p><strong>31</strong>Savukoski, T., et al, Troponin–Specific Autoantibody Interference in Different Cardiac Troponin I Assay Configurations, Clin Chem. 2012, 58(6):1040-1048.</p>
+                <p><strong>32</strong>Florkowski, C., et al, Letters to the Editor-The Effect of Hemolysis on Current Troponin Assays—A Confounding Preanalyitical Variable?, Clin Chem.<br>2010;56(7):1195-1197.</p>
+                
+                <p><em>Images Created by Koeus Solutions.</em></p>
+
+            
+            
+            </div>
+            </div>
+        </div>
+        
+        <!--<a class="left_btn" href="#"></a> NAVIGATE LEFT -->
+        <!--<a class="right_btn" href="#"></a> NAVIGATE RIGHT -->
+        <a style="right:2px;" class="narrative_btn" href="#"></a>
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

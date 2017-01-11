@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+
+	.image_area img {
+		width: 720px;
+		margin: 0px 40px;
+		opacity: 0.3;
+	}
+	
+	.image_area h2 {
+		font-family: 'ImagoBold';
+		font-size: 50px;
+		width: 720px;
+		position: absolute;
+		left: 50%;
+		top: 155px;
+		margin-left: -360px;
+		text-align: center;
+		color: rgb(0,148,94);
+		text-shadow: 4px 4px rgba(0,0,0,.15);
+	}
+	
+	a.sensitivity_btn {
+		left: 19px;
+		box-shadow: none;
+		background-image: url(images/btns/sensitivity-btn.png);
+	}
+</style>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>Criteria for Acute MI</h1>
+                
+                <img src="images/sensitivity_01.jpg">
+                <h2>Detection of a rise and/or fall of cardiac biomarkers values with at least one value above the 99th percentile upper reference limit (URL). <sup>6</sup></h2>
+            </div>
+            
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+				<p>Troponins are essential in the diagnosis of AMI, according to the Third Definition released in August 2012, as clear evidence of necrosis. A rise or fall pattern and at least one value above the 99<sup>th</sup> percentile are essential for Troponins.</p>
+                <p>What data do they have to support their 99<sup>th</sup> percentile?</p>
+            </div>
+
+        </div>
+        
+        <!--<a class="left_btn" href="#"></a> NAVIGATE LEFT -->
+        <a class="right_btn" href="sensitivity_02.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

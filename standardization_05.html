@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TimelineMax.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+	.stock_photo {
+		width: 650px;
+		margin: 0px 75px;
+	}
+	
+	.image_area h2 {
+		font-family: 'ImagoBold';
+		font-size: 50px;
+		width: 720px;
+		position: absolute;
+		left: 50%;
+		top: 260px;
+		margin-left: -360px;
+		text-align: center;
+		color: rgb(0,148,94);
+		opacity: 0;
+		z-index: -1;
+		text-shadow: 4px 4px rgba(0,0,0,.15);
+		line-height: 32px;
+	}
+	
+	.image_area h2 span {
+		font-size: 22px;
+	}
+	
+	h2.first {
+		top: 260px;
+	}
+	
+	h2.second {
+		top: 315px;
+	}
+	
+	a.standardization_btn {
+		left: 19px;
+		box-shadow: none;
+		background-image: url(images/btns/standardization-btn.png);
+	}
+</style>
+<script>
+	$(document).ready(function() {
+		var hitCount = 0;
+		
+		$('.image_area img, h2').on('tap', function() {
+			if (hitCount == 0) {
+				TweenMax.to($(this), .8, {opacity: 0.4});
+				$('.image_area h2').css('z-index','1000');
+				TweenMax.to($('h2.first'), 1, {opacity: 1});
+				hitCount = 1;
+			} else if(hitCount == 1) {
+				var anims = new TimelineMax();
+					anims.to($('h2.first'), .5, {top: '215px'});
+					anims.to($('h2.second'), 1, {opacity: 1});
+				hitCount = 2;
+			}
+		});
+		
+	});
+</script>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>Correlation of TnI results</h1>
+                
+				<img class="stock_photo" src="images/standardization_05.jpg">
+                <h2 class="first">TnI POC - 0.03 ng/mL<br><span>(Negative - 99<sup>th</sup> percentile of 0.08 ng/mL)</span></h2>
+                <h2 class="second">TnI Core Lab - 0.05 ng/mL<br><span>(Positive - 99<sup>th</sup> percentile of 0.04 ng/mL)</span></h2>
+                
+                <ul class="touch_icons">
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+				<p>Let's say a patient comes in to the ED having an event. A POC Troponin I test is run and the patient is negative at 0.03 ng/mL. A second test is run using a different Troponin I test at the core lab (using a 99<sup>th</sup> percentile of 0.04 ng/mL) and the result comes back positive at 0.05 ng/mL.</p>
+                <p>Even though each of these tests were run on the same patient specimen, the results do not correlate.</p>
+                <p>As you can see, no Troponin I assays correlate, and therefore there is no standardization.</p>
+                <p>What if your hospital or IHN is using more than one Troponin I?</p>
+            </div>
+        </div>
+        
+        <a class="left_btn" href="standardization_04.html"></a><!-- NAVIGATE LEFT -->
+        <a class="right_btn" href="standardization_06.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+	.icons {
+		width: 720px;
+		margin: 20px 40px 0px 60px;
+	}
+	
+	.btn_a, .btn_b, .btn_c {
+		width: 150px;
+		margin-left: 80px;
+		box-shadow: 4px 4px 0px rgba(0,0,0,.15);
+	}
+	
+	.hide {
+		display: none;
+	}
+	
+	a.standardization_btn {
+		left: 19px;
+		box-shadow: none;
+		background-image: url(images/btns/standardization-btn.png);
+	}
+</style>
+<script>
+	$(document).ready(function() {
+		
+		$('.btn_a').on('tap', function() {
+			$('.icons').attr('src','images/standardization_02/assay_a.jpg');
+		});
+		
+		$('.btn_b').on('tap', function() {
+			$('.icons').attr('src','images/standardization_02/assay_b.jpg');
+		});
+		
+		$('.btn_c').on('tap', function() {
+			$('.icons').attr('src','images/standardization_02/assay_c.jpg');
+		});
+	});
+</script>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>TnI assays have different analytical sensitivities</h1>
+                
+                <img class="icons" src="images/standardization_02/icons_default.jpg">
+                <img class="hide" src="images/standardization_02/assay_a.jpg">
+                <img class="hide" src="images/standardization_02/assay_b.jpg">
+                <img class="hide" src="images/standardization_02/assay_c.jpg">
+                
+                <img class="btn_a" src="images/standardization_02/assay_a_btn.png">
+                <img class="btn_b" src="images/standardization_02/assay_b_btn.png">
+                <img class="btn_c" src="images/standardization_02/assay_c_btn.png">
+                
+                <ul class="touch_icons">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+            </div>
+        
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+                <p>The multiplicity of assays for TnI makes standardization of TnI results problematic.<sup>26</sup>
+                	<ul>
+                    	<li>TnI assays have different analytical sensitivities.</li>
+                        <li>Different TnI assays measure different epitopes of TnI.</li>
+                        <li>TnI assays have different 99<sup>th</sup> percentiles.</li>
+                    </ul>
+                </p>
+                <p>How do you take serial measurements using two different TnI assays?</p>
+                <p>How many different TnI assays does it take to detect TnI?</p>
+            </div>
+        </div>
+        
+        <a class="left_btn" href="standardization_01.html"></a><!-- NAVIGATE LEFT -->
+        <a class="right_btn" href="standardization_03.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

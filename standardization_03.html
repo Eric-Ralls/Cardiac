@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+
+	.detection {
+		width: 218px;
+		position: relative;
+		left: 542px;
+		top: -436px;
+		z-index: 100;
+		box-shadow: 0px 0px 0px rgb(0,0,0);
+	}
+	
+	.chart, .beckman, .siemens {
+		width: 720px;
+		margin: 0px 40px;
+		position: relative;
+		z-index: 100;
+		box-shadow: 0px 0px 0px rgb(0,0,0);
+	}
+	
+	.chart {
+		margin-top: 50px;
+	}
+
+	.beckman {
+		top: -207px;
+	}
+	
+	.siemens {
+		top: -189px;
+	}
+	
+	.image_area h2 {
+		font-family: 'ImagoBold';
+		font-size: 26px;
+		width: 720px;
+		position: absolute;
+		left: 50%;
+		top: 475px;
+		margin-left: -360px;
+		text-align: center;
+		color: rgb(0,148,94);
+		opacity: 0;
+		text-shadow: 4px 4px rgba(0,0,0,.15);
+	}
+	
+	.image_area p {
+		position: absolute;
+		bottom: 110px;
+		left: 40px;
+		font-size: 11px;
+	}
+	
+	a.standardization_btn {
+		left: 19px;
+		box-shadow: none;
+		background-image: url(images/btns/standardization-btn.png);
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		var initialized = false;
+		
+		$('.detection').on('tap', function() {
+			if (!initialized) {
+				resetChart();
+				if (parseInt($(this).css('width')) < 258) {
+					TweenMax.to($('.chart'), .5, {opacity: 0.4});
+					TweenMax.to($('.siemens'), .5, {opacity: 0.4});
+					TweenMax.to($('.beckman'), .5, {opacity: 0.4});
+					TweenMax.to($(this), .5, {width:'258px', left:'522px', 'z-index':1000, 'box-shadow':'0px 0px 5px rgb(0,0,0)'});
+				} else {
+					TweenMax.to($(this), .5, {opacity:0, width:'218px', left:'542px', 'box-shadow':'0px 0px 0px rgb(0,0,0)'});
+					initialized = true;
+				}
+			}
+		});
+		
+		$('.beckman').on('tap', function() {
+			if (initialized) {
+				resetChart();
+				if (parseInt($(this).css('width')) < 760) {
+					TweenMax.to($('.chart'), .5, {opacity: 0.4});
+					TweenMax.to($('.siemens'), .5, {opacity: 0.4});
+					TweenMax.to($(this), .5, {width: '760px', left:'-20px', 'z-index':1000, 'box-shadow':'0px 0px 5px rgb(0,0,0)'});
+					TweenMax.to($('.image_area h2'), .5, {'opacity':1});
+				}
+			}
+		});
+		
+		$('.siemens').on('tap', function() {
+			if (initialized) {
+				resetChart();
+				if (parseInt($(this).css('width')) < 760) {
+					TweenMax.to($('.chart'), .5, {opacity: 0.4});
+					TweenMax.to($('.beckman'), .5, {opacity: 0.4});
+					TweenMax.to($(this), .5, {width: '760px', left:'-20px', 'z-index':1000, 'box-shadow':'0px 0px 5px rgb(0,0,0)'});
+				}
+			}
+		});
+		
+		function resetChart() {
+			TweenMax.to($('.chart'), .5, {opacity: 1});
+			TweenMax.to($('.beckman'), .5, {opacity: 1, width: '720px', left:'0px', 'box-shadow':'0px 0px 0px rgb(0,0,0)'});
+			TweenMax.to($('.siemens'), .5, {opacity: 1, width: '720px', left:'0px', 'box-shadow':'0px 0px 0px rgb(0,0,0)'});
+			TweenMax.to($('.image_area h2'), .5, {'opacity':0});
+		}
+		
+		
+	});
+</script>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>An I is not an I <sup>7</sup></h1>
+                
+                <img class="chart" src="images/charts/standardization_03.jpg">
+                <img class="beckman" src="images/charts/standardization_03_beckman.jpg">
+                <img class="siemens" src="images/charts/standardization_03_siemens.jpg">
+                <img class="detection" src="images/charts/standardization_03_detection.jpg">
+                
+                <p>Data Abridged.</p>
+                
+                <h2>The most recently FDA-approved assays.</h2>
+                
+                <ul class="touch_icons">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                
+            </div>
+        
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+            	<p>All of the Troponin I assays that exist today, have different 99th percentiles, and also have different CVs.
+                	<ul><li>They are all measuring different epitopes.</li></ul>
+                </p>
+                <p>The two Beckman assays have different 99th percentiles at a 20% CV and have the same epitopes.
+                	<ul><li>They have the same reagent on two different instruments, and it performs differently, and  have different 99th percentiles.</li></ul>
+                </p>
+                <p>What does that say about their reagent?</p>
+                <p>You can never say that a Siemens assay is comparable to another Siemens assay.
+                	<ul><li>Their 99th percentiles span from 0.04 ng/mL all the way up to 0.2 ng/mL and are measuring all different epitopes.</li></ul>
+                </p>
+
+            </div>
+        </div>
+        
+        <a class="left_btn" href="standardization_02.html"></a><!-- NAVIGATE LEFT -->
+        <a class="right_btn" href="standardization_04.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+	img.calc {
+		width: 520px;
+		margin: 0px 140px;
+		position: absolute;
+		top: 110px;
+	}
+	
+	.image_area h2.screen_text {
+		font-family: 'ImagoBold';
+		font-size: 30px;
+		width: 720px;
+		position: absolute;
+		left: 50%;
+		top: 385px;
+		margin-left: -360px;
+		text-align: center;
+		color: rgb(0,148,94);
+		text-shadow: 4px 4px rgba(0,0,0,.15);
+	}
+	
+	.image_area h2.question {
+		font-family: 'ImagoBold';
+		font-size: 50px;
+		width: 720px;
+		position: absolute;
+		left: 50%;
+		top: 245px;
+		margin-left: -360px;
+		text-align: center;
+		color: rgb(0,148,94);
+		opacity: 0;
+		z-index: -1;
+		text-shadow: 4px 4px rgba(0,0,0,.15);
+	}
+	
+	a.speed_btn {
+		left: 19px;
+		box-shadow: none;
+		background-image: url(images/btns/speed-btn.png);
+	}
+</style>
+<script>
+	$(document).ready(function() {
+		$('.calc').on('tap', function() {
+			TweenMax.to($(this), .8, {opacity: 0.4});
+			TweenMax.to($('.screen_text'), .8, {opacity: 0.4});
+			$('h2.question').css('z-index','1000');
+			TweenMax.to($('h2.question'), 1, {opacity: 1});
+		});
+	});
+</script>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>Minutes Matter Calculator</h1>
+                
+                <img class="calc" src="images/speed_02/2.jpg">
+                <h2 class="screen_text">Let's assume Customer X is running 20,000 Troponin tests per year and is able to save 15 minutes in turnaround time per test.</h2>
+                <h2 class="question">How many additional patients could your ED see per year?</h2>
+                
+                <ul class="touch_icons">
+                    <li></li>
+                </ul>
+            </div>
+        
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+            	<p>Assume Customer X is running 20,000 Troponin tests per year and is able to save 15 minutes in turnaround time per test (going from 43 to 28 minutes per Troponin).</p>
+                <p>You can clearly see the amount of minutes saved if all processes remained the same.</p>
+                <p><strong>How many additional patients could your ED see per year?</strong></p>
+                <ul>
+                    <li>What are the most significant advantages of saving these minutes in turnaround time?</li>
+                    <li>Would saving these minutes also help you in your relationship with your physicians?</li>
+                    <li>Tell me how saving these minutes could positively affect your entire organization?</li>
+                </ul>
+            </div>
+        </div>
+        
+        <a class="left_btn" href="speed_01.html"></a><!-- NAVIGATE LEFT -->
+        <a class="right_btn" href="speed_03.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>

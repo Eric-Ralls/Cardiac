@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title></title>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/plugins/CSSPlugin.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/narrative-animate.js"></script>
+<script src="js/jquery.tap.min.js"></script>
+<link href="css/layout.css" rel="stylesheet" type="text/css">
+<style>
+	img.background {
+		width: 600px;
+		margin: 0px 100px;
+	}
+	
+	/*.i_hs, .t_hs {
+		position: absolute;
+	}
+	
+	.i_hs {
+		width: 38px;
+		top: 331px;
+		left: 294px;
+	}*/
+	
+	area {
+		outline: 0;
+	}
+	
+	.t_hs {
+		width: 85px;
+		top: 324px;
+		left: 209px;
+	}
+	
+	.trop_t, .trop_i {
+		position: absolute;
+		height: 150px;
+		left: 485px;
+		top: 160px;
+		border: 2px solid rgb(0,148,94);
+		box-shadow: 4px 4px 0px rgba(0,0,0,.15);
+		opacity: 0;
+	}
+	
+</style>
+<script>
+	$(document).ready(function() {
+		
+		$('.i_hs').on('tap', function(event) {
+			event.preventDefault();
+			resetImgs();
+			TweenMax.to($('.trop_i'), .5, {opacity:1});
+		});
+		
+		$('.t_hs').on('tap', function(event) {
+			event.preventDefault();
+			resetImgs();
+			TweenMax.to($('.trop_t'), .5, {opacity:1});
+		});
+			
+		function resetImgs() {
+			TweenMax.to([$('.trop_t'), $('.trop_i')], .5, {opacity:0});
+		}
+			
+					
+	});
+
+</script>
+</head>
+
+<body>
+
+	<div id="main_window">
+
+        <div id="content_area"><!-- CONTENT CONTAINER -->
+            <div class="image_area"><!-- IMAGERY CONTAINER -->
+                <h1>What is Troponin? <sup>2,3</sup></h1>
+                
+                <img class="background" src="images/background_02/default.jpg" usemap="#bkgd">
+                <!--<img class="i_hs" src="images/background_02/i_hotspot.jpg">
+                <img class="t_hs" src="images/background_02/t_hotspot.jpg">0-->
+                
+                <map name="bkgd">
+                	<area class="t_hs" shape="rect" coords="97,244,186,329" href="#" alt="Troponin T">
+                    <area class="i_hs" shape="rect" coords="182,258,223,310" href="#" alt="Troponin I"
+                </map>
+                <img class="trop_i" src="images/background_02/trop_i.jpg">
+                <img class="trop_t" src="images/background_02/trop_t.jpg">
+                
+                <ul class="touch_icons">
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        
+            <div class="text_area"><!-- NARRATIVE CONTAINER -->
+				<p>Troponin is a globular protein complex attached to actin filament of striated muscle, distributed at regular intervals along the tropomyosin filament. The complex has three subunits.<sup>4</sup></p>
+                <p>As a result of its high tissue-specificity, cardiac troponin (cTn) is a cardio-specific,  highly sensitive marker for myocardial damage.</p>
+                <p>There are two types of cTn:
+                	<ul>
+                    	<li>cTnI</li>
+                        <li>cTnT</li>
+                    </ul>
+				</p>
+            </div>
+        </div>
+        
+        <a class="left_btn" href="background_01.html"></a><!-- NAVIGATE LEFT -->
+        <a class="right_btn" href="background_03.html"></a><!-- NAVIGATE RIGHT -->
+        <a class="narrative_btn" href="#"></a><!-- TOGGLE NARRATIVE -->
+        
+        <img class="roche_logo" src="images/roche-logo.png">
+        <img class="cobas_logo" src="images/cobas-logo.png">
+    
+    </div>
+    
+    <div class="button_line"></div>
+    
+    <script src="js/main_navigation.js"></script>
+    
+    
+</body>
+</html>
